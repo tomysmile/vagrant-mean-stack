@@ -1,6 +1,6 @@
-# vagrant MEAN stack
+# Vagrant MEAN stack
 
-MEAN - MongoDB, ExpressJS, AngularJS, NodeJS. based fullstack js framework using Vagrant.
+MEAN - MongoDB, ExpressJS, AngularJS, NodeJS - based fullstack js framework using Vagrant.
 
 Requirements
 ------------
@@ -21,3 +21,12 @@ Usage
 	$ cd vagrant-mean-stack
 	$ vagrant up --provider virtualbox
 
+#### MongoDB
+Externally the MongoDB server is available at port 8817, and when running on the VM it is available as a socket or at port 27017 as usual.
+
+Package list
+-----------------
+* Ubuntu 14.04 64-bit
+* MongoDB v3.0.0
+* NodeJS v0.10.38 / NPM v2.10.0
+* NPM: Express, Bower, Grunt-Cli, Yo
