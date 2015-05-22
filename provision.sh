@@ -55,6 +55,10 @@ dpkg -s mongodb-org &>/dev/null || {
 	apt-get update
 	apt-get install -y mongodb-org=3.0.0 mongodb-org-server=3.0.0 mongodb-org-shell=3.0.0 mongodb-org-mongos=3.0.0 mongodb-org-tools=3.0.0
 
+	# Allow mongodb remote connection
+	sed -i "s/bind_ip = 127.0.0.1/bind_ip = 0.0.0.0/g" /etc/mongod.conf
+	service mongod restart
+
 	echo "mongodb-org hold" | dpkg --set-selections
 	echo "mongodb-org-server hold" | dpkg --set-selections
 	echo "mongodb-org-shell hold" | dpkg --set-selections
@@ -76,6 +80,7 @@ dpkg -s nodejs &>/dev/null || {
 	#install base npm packages
 	npm install -g bower
 	npm install -g grunt-cli
+	npm install -g gulp
 	npm install -g express
 	npm install -g yo
 }
