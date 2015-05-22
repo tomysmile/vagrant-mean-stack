@@ -81,6 +81,7 @@ dpkg -s nodejs &>/dev/null || {
 	npm install -g bower
 	npm install -g grunt-cli
 	npm install -g gulp
+  npm install -g nodemon
 	npm install -g express
 	npm install -g yo
 }
