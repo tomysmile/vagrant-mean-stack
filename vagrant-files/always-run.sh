@@ -1,8 +1,15 @@
 #!/bin/bash
+echo "============================================================="
 echo "Run 'vagrant ssh' then set your git config manually:"
-echo "ssh-keygen -t rsa"
+echo "$ git config --global user.name '<your name>'"
+echo "$ git config --global user.email <your email>"
+echo "$ ssh-keygen -t rsa"
 echo "(Copy the contents of ~/.ssh/id_rsa.pub into your GitHub account: https://github.com/settings/ssh)"
-echo "git config --global user.name '<your name>'"
-echo "git config --global user.email <your email>"
+printf "\n\n"
+echo "============================================================="
+echo "MongoDB external Port : 8817"
+echo "To replicate your host changes to guest (vagrant) environment, run below from host:"
+echo "$ vagrant rsync-auto"
+echo "============================================================="
 
 printf "\n--build v1.0.0--\n\n"
