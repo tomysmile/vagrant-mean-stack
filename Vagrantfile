@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder ".", "/vagrant", type: "rsync",
-    rsync__exclude: ".git/"
+    rsync__exclude: [".git/","node_modules", "bower_components"]    
 
   # Provision script - run once
   config.vm.provision "shell", path: "provision.sh"
